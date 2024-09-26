@@ -145,7 +145,7 @@ def main():
         resume_ckpt = join(PATCHNETVLAD_ROOT_DIR, resume_ckpt)
         if not isfile(resume_ckpt):
             from download_models import download_all_models
-            download_all_models(ask_for_permission=True)
+            download_all_models(ask_for_permission=False)
 
     if isfile(resume_ckpt):
         print("=> loading checkpoint '{}'".format(resume_ckpt))
